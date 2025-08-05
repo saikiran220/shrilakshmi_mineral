@@ -1,3 +1,5 @@
+import React from 'react';
+import { FaUsers, FaCogs, FaHandshake } from 'react-icons/fa';
 import miningBg from '../../assets/images/mining.png';
 
 const CompetitorComponent = () => {
@@ -13,15 +15,16 @@ const CompetitorComponent = () => {
         </p>
 
         <div className="competitor-features">
-          <div className="feature-item">
-            <h3>Understanding Customer<br />Expectations</h3>
+          <div className="yellow-feature">
+                <h3>Understanding Customer<br />Expectations</h3>
             <p>
               Understanding your wish to complete a project on time and
               on budget and achieving that is our commitment.
             </p>
           </div>
 
-          <div className="feature-item">
+          <div className="yellow-feature">
+        
             <h3>Well-Defined<br />Management System</h3>
             <p>
               We have a proven management system that prevents dysfunction
@@ -29,7 +32,8 @@ const CompetitorComponent = () => {
             </p>
           </div>
 
-          <div className="feature-item">
+          <div className="yellow-feature">
+ 
             <h3>Stakeholder<br />Commitment</h3>
             <p>
               Our motto is success through partnership. Becoming a true partner &

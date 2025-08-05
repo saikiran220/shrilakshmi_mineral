@@ -123,11 +123,17 @@
 }
 
 .global-export-about-content p {
-  font-size: 1.1rem;
+  color: #333;
+  font-size: 1.25rem;
   line-height: 1.6;
-  color: #666;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 10px 10px;
+  text-align: left;
+  position: relative;
   animation: textFadeIn 1s ease-out 0.7s both;
+  opacity: 0;
+  transform: translateY(10px);
+  margin-bottom: 20px;
 }
 
 @keyframes textFadeIn {
@@ -142,10 +148,10 @@
 }
 
 .global-export-brochures-section h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 600;
-  color: #333;
-  margin-bottom: 25px;
+  color: #8B0000;
+  margin-bottom: clamp(20px, 3vw, 25px);
 }
 
 .global-export-brochure-item {
@@ -230,32 +236,45 @@
   z-index: 2;
 }
 
-.export-highlights-content {
+.export-highlights-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
+  align-items: center;
+}
+
+.export-highlights-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.global-export-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.global-export-image:hover {
+  transform: scale(1.02);
+}
+
+.export-highlights-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .what-we-offer h3,
 .export-highlights h3 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #333;
+  color:#8B0000;
   margin-bottom: 30px;
   position: relative;
 }
 
-.what-we-offer h3::after,
-.export-highlights h3::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 40px;
-  height: 3px;
-  background: #FFB700;
-  animation: underlineExpand 1s ease-out 0.5s both;
-}
 
 .what-we-offer ul,
 .export-highlights ul {
@@ -267,14 +286,26 @@
 .what-we-offer li,
 .export-highlights li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   margin-bottom: 20px;
   font-size: 1.1rem;
   line-height: 1.5;
-  color: #555;
+  color: #000000;
   transition: transform 0.3s ease;
   animation: listItemSlideIn 0.6s ease-out both;
+}
+
+.what-we-offer li {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.export-highlights li {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
 .what-we-offer li:nth-child(1) { animation-delay: 0.4s; }
@@ -303,12 +334,15 @@
   transform: translateX(10px);
 }
 
+
 .check-icon {
-  color: #28a745;
+  color: #8B0000;
   font-size: 1.2rem;
-  margin-top: 2px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .what-we-offer li:hover .check-icon,
@@ -343,7 +377,7 @@
 /* Global Export CTA Section */
 .global-export-cta-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #8B0000, #A52A2A);
+  background: linear-gradient(135deg, #8B0000, #FFB700);
   color: white;
   text-align: center;
   animation: sectionFadeIn 1s ease-out 0.6s both;
@@ -419,7 +453,7 @@
     gap: 40px;
   }
   
-  .export-highlights-content {
+  .export-highlights-container {
     gap: 40px;
   }
 }
@@ -434,13 +468,21 @@
     order: -1;
   }
   
-  .export-highlights-content {
+  .export-highlights-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   
-  .cargo-ship-overlay {
-    display: none;
+  .export-highlights-left {
+    order: 2;
+  }
+  
+  .export-highlights-right {
+    order: 1;
+  }
+  
+  .global-export-image {
+    max-width: 500px;
   }
 }
 
@@ -460,6 +502,11 @@
   
   .export-highlights-container {
     padding: 0 20px;
+    gap: 30px;
+  }
+  
+  .global-export-image {
+    max-width: 450px;
   }
   
   .export-highlights-section {
@@ -488,6 +535,16 @@
   .export-highlights li {
     font-size: 1rem;
   }
+  
+  .what-we-offer li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .export-highlights li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -506,6 +563,25 @@
   
   .export-highlights-container {
     padding: 0 15px;
+    gap: 25px;
+  }
+  
+  .global-export-image {
+    max-width: 380px;
+  }
+  
+  .export-highlights-right {
+    gap: 25px;
+  }
+  
+  .what-we-offer li {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  
+  .export-highlights li {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
   }
   
   .export-highlights-section {

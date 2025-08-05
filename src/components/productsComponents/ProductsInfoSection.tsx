@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCheck } from 'react-icons/fa';
+import { TiArrowRightThick } from "react-icons/ti";
 
 const ProductsInfoSection: React.FC = () => {
   const otherStones = [
@@ -23,7 +23,7 @@ const ProductsInfoSection: React.FC = () => {
           <ul>
             {otherStones.map((stone, index) => (
               <li key={index}>
-                <FaCheck className="check-icon" />
+                <TiArrowRightThick className="check-icon" />
                 <span>{stone}</span>
               </li>
             ))}
@@ -35,7 +35,7 @@ const ProductsInfoSection: React.FC = () => {
           <ul>
             {customizationServices.map((service, index) => (
               <li key={index}>
-                <FaCheck className="check-icon" />
+                <TiArrowRightThick className="check-icon" />
                 <span>{service}</span>
               </li>
             ))}

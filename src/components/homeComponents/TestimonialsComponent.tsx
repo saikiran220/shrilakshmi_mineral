@@ -29,8 +29,8 @@ const TestimonialsComponent = () => {
         <div className="testimonials-header">
           <h2>TESTIMONIALS</h2>
           <div className="title-line"></div>
-          </div>
-        
+        </div>
+
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
@@ -43,9 +43,9 @@ const TestimonialsComponent = () => {
                   <p className="testimonial-text">{testimonial.text}</p>
                   <FaQuoteRight className="quote-right" />
                 </div>
-                                                                               <div className="testimonial-author">
-                          <h3 className="author-name">{testimonial.name} :- <span>{testimonial.position}</span></h3>
-                        </div>
+                <div className="testimonial-author">
+                  <h3 className="author-name">{testimonial.name} (<span>{" "+testimonial.position+" "}</span>) </h3>
+                </div>
               </div>
             </div>
           ))}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import miningImage from '../../assets/images/middle.png';
+import { TiArrowRightThick } from "react-icons/ti";
+import miningImage from '../../assets/images/gallery_images/middle_image.png';
 
 const PremiumComponent = () => {
   return (
@@ -21,24 +22,24 @@ const PremiumComponent = () => {
           <h2>Why Choose Us?</h2>
           <ul className="benefits-list">
             <li>
-              <span className="check-icon">✓</span>
-              High-Quality Natural Stone Selection
+              <TiArrowRightThick className="check-icon" />
+              <span>High-Quality Natural Stone Selection</span>
             </li>
             <li>
-              <span className="check-icon">✓</span>
-              Competitive Pricing & Timely Delivery
+              <TiArrowRightThick className="check-icon" />
+              <span>Competitive Pricing & Timely Delivery</span>
             </li>
             <li>
-              <span className="check-icon">✓</span>
-              Customized Sizing & Finishing
+              <TiArrowRightThick className="check-icon" />
+              <span>Customized Sizing & Finishing</span>
             </li>
             <li>
-              <span className="check-icon">✓</span>
-              Expert Guidance & Support
+              <TiArrowRightThick className="check-icon" />
+              <span>Expert Guidance & Support</span>
             </li>
             <li>
-              <span className="check-icon">✓</span>
-              Global Export Capabilities
+              <TiArrowRightThick className="check-icon" />
+              <span>Global Export Capabilities</span>
             </li>
           </ul>
         </div>
