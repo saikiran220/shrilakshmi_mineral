@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPlay, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import v1 from '../../assets/images/gallery_images/v1.mp4';
 
 // Import all gallery images
 import g1 from '../../assets/images/gallery_images/g1.png';
@@ -40,6 +41,7 @@ const GalleryGrid: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const galleryItems = [
+    
     {
       id: 1,
       type: 'image',
@@ -79,6 +81,15 @@ const GalleryGrid: React.FC = () => {
       alt: 'Stone quarry with organized block arrangement',
       hasVideo: false,
       videoTime: undefined
+    },
+    {
+      id: 0,
+      type: 'video',
+      src: v1,
+      thumbnail: g1,
+      alt: 'Stone quarry operations video',
+      hasVideo: true,
+      videoTime: '2:30'
     },
     {
       id: 6,
@@ -343,7 +354,7 @@ const GalleryGrid: React.FC = () => {
                     }
                   }}
                 >
-                <img src={item.src} alt={item.alt} />
+                <img src={item.type === 'video' ? item.thumbnail : item.src} alt={item.alt} />
                   {!showAllImages && index === 8 && (
                     <div className="see-more-overlay">
                       <div className="see-more-content">
@@ -407,11 +418,22 @@ const GalleryGrid: React.FC = () => {
               </button>
               
               <div className="modal-image-wrapper">
-                <img 
-                  src={galleryItems[currentImageIndex].src} 
-                  alt={galleryItems[currentImageIndex].alt}
-                  className="modal-image"
-                />
+                {galleryItems[currentImageIndex].type === 'video' ? (
+                  <video 
+                    src={galleryItems[currentImageIndex].src} 
+                    controls
+                    autoPlay
+                    className="modal-video"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img 
+                    src={galleryItems[currentImageIndex].src} 
+                    alt={galleryItems[currentImageIndex].alt}
+                    className="modal-image"
+                  />
+                )}
                 <div className="modal-image-info">
                   <span className="image-counter">
                     {currentImageIndex + 1} / {galleryItems.length}
