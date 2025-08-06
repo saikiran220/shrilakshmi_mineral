@@ -19,7 +19,7 @@ const ContactSection = () => {
               </div>
               <div className="text-content">
                 <p>
-                  Survey No. 182/9A & 183/3B, Chimakurthy,<br />
+                  Survey No. 182/9A & 183/3B, Chimakurthy,Ram Nagar 1st line, beside bypass<br />
                   Prakasam (DT), AP-523226
                 </p>
               </div>
@@ -58,10 +58,17 @@ const ContactSection = () => {
 
       {/* Map Section */}
       <div className="map-section">
-        <img 
-          src={mapImage} 
-          alt="Location Map"
-        />
+        <a 
+          href="https://www.google.com/maps/place/Chimakurthy,+Andhra+Pradesh+523226/@15.5850383,79.8479472,5065m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a4ae250ca031f1d:0x8b2576d4c7d91616!8m2!3d15.5855375!4d79.8671813!16zL20vMGJqNjk4?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: 'pointer' }}
+        >
+          <img 
+            src={mapImage} 
+            alt="Location Map"
+          />
+        </a>
       </div>
     </section>
   );

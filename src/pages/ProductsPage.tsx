@@ -1,4 +1,3 @@
-import React from 'react';
 import ProductsHeroSection from '../components/productsComponents/ProductsHeroSection';
 import ProductsAboutSection from '../components/productsComponents/ProductsAboutSection';
 import GraniteSection from '../components/productsComponents/GraniteSection';

@@ -1,5 +1,3 @@
-import React from 'react';
-import { FaUsers, FaCogs, FaHandshake } from 'react-icons/fa';
 import miningBg from '../../assets/images/mining.png';
 
 const CompetitorComponent = () => {

@@ -146,7 +146,7 @@ const ContactFormSection: React.FC = () => {
                 <div className="phone-lines">
                   <div>+91 9948550009</div>
                   <div>+91 8592299946</div>
-                  <div>7 Days a week from 9:00 am to 7:00 pm</div>
+                
                 </div>
               </li>
              <li className="contact-item">
